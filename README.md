@@ -58,7 +58,6 @@
 * requests
 * pandas
 * matplotlib
-* seaborn
 * pytest
 * python-dotenv
 
