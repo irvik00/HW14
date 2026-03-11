@@ -5,7 +5,7 @@ import numpy as np
 
 logger = logging.getLogger(__name__)
 
-# Константы для удобства
+
 DEFAULT_CVSS_THRESHOLD = 7.0
 DEFAULT_TOP_IPS_COUNT = 5
 
@@ -352,4 +352,5 @@ if __name__ == "__main__":
     print(top_ips if not top_ips.empty else "Нет данных")
     
     stats = get_cvss_summary_stats(test_vulns)
+
     print(f"\nСтатистика CVSS: {stats}")
