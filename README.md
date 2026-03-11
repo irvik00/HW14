@@ -1,7 +1,5 @@
 # Threat Analyzer
 
-Автоматизированный мониторинг и реагирование на угрозы (учебный проект).
-
 ![Python](https://img.shields.io/badge/python-3.8+-blue)
 ![Tests](https://img.shields.io/badge/tests-pytest-green)
 ![License](https://img.shields.io/badge/license-educational-lightgrey)
