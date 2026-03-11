@@ -81,7 +81,7 @@ def _add_watermark(fig: plt.Figure) -> None:
     watermark_text = f"Threat Analyzer · Итоговое задание · {current_time}"
     
     fig.text(
-        0.02, 0.02,  # смещено влево (x=0.02)
+        0.02, 0.02, 
         watermark_text,
         fontsize=7,
         color=COLORS['watermark'],
@@ -318,8 +318,8 @@ def plot_cvss_distribution(
     for i, (count, bin_edge) in enumerate(zip(n, bins[:-1])):
         if count > 0:
             ax.text(
-                bin_edge + 0.25,  # центр столбца
-                count + 0.1,       # чуть выше столбца
+                bin_edge + 0.25,
+                count + 0.1,
                 str(int(count)),
                 ha='center',
                 va='bottom',
@@ -449,4 +449,5 @@ if __name__ == "__main__":
     cvss_path = plot_cvss_distribution(test_cvss, "test_cvss.png")
     print(f"   Сохранено: {cvss_path}")
       
+
     print("\nВсе графики созданы")
