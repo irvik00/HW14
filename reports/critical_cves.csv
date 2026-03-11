@@ -1,0 +1,9 @@
+﻿cve_id,cvss,description,severity_category
+CVE-2026-3826,9.8,"IFTOP developed by WellChoose has a Local File Inclusion vulnerability, allowing unauthenticated remote attackers to execute arbitrary code on the server.",Критическая
+CVE-2026-31844,9.0,An authenticated SQL Injection vulnerability (CWE-89) exists in the Koha staff interface in the /cgi-bin/koha/suggestion/suggestion.pl endpoint due to improper validation of the displayby parameter us...,Критическая
+CVE-2026-1992,8.8,The ExactMetrics – Google Analytics Dashboard for WordPress plugin is vulnerable to Insecure Direct Object Reference in versions 8.6.0 through 9.0.2. This is due to the `store_settings()` method in th...,Высокая
+CVE-2026-1993,8.8,The ExactMetrics – Google Analytics Dashboard for WordPress plugin is vulnerable to Improper Privilege Management in versions 7.1.0 through 9.0.2. This is due to the `update_settings()` function accep...,Высокая
+CVE-2026-1708,7.5,"The Appointment Booking Calendar — Simply Schedule Appointments Booking Plugin plugin for WordPress is vulnerable to blind SQL Injection in all versions up to, and including, 1.6.9.27. This is due to ...",Высокая
+CVE-2026-3222,7.5,"The WP Maps plugin for WordPress is vulnerable to time-based blind SQL Injection via the 'location_id' parameter in all versions up to, and including, 4.9.1. This is due to the plugin's database abstr...",Высокая
+CVE-2026-3231,7.2,The Checkout Field Editor (Checkout Manager) for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via custom radio and checkboxgroup field values submitted through the Woo...,Высокая
+CVE-2026-1454,7.2,"The Responsive Contact Form Builder & Lead Generation Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 2.0.1 via form field submissions. T...",Высокая

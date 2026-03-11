@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-03-11T14:08:05.350108",
+  "total_vulnerabilities_received": 29,
+  "critical_cves_found": 8,
+  "total_alerts_processed": 9,
+  "top_5_ips": [
+    {
+      "src_ip": "192.168.1.10",
+      "count": 4,
+      "avg_severity": 1.0,
+      "max_severity": 1,
+      "risk_score": 73.3
+    },
+    {
+      "src_ip": "192.168.1.20",
+      "count": 2,
+      "avg_severity": 2.0,
+      "max_severity": 2,
+      "risk_score": 56.7
+    },
+    {
+      "src_ip": "192.168.1.30",
+      "count": 1,
+      "avg_severity": 3.0,
+      "max_severity": 3,
+      "risk_score": 55.0
+    },
+    {
+      "src_ip": "192.168.1.40",
+      "count": 1,
+      "avg_severity": 3.0,
+      "max_severity": 3,
+      "risk_score": 55.0
+    },
+    {
+      "src_ip": "192.168.1.50",
+      "count": 1,
+      "avg_severity": 2.0,
+      "max_severity": 2,
+      "risk_score": 41.7
+    }
+  ],
+  "blocked_ips_count": 1,
+  "blocked_ips": [
+    "192.168.1.10"
+  ],
+  "sources": {
+    "vulns_loaded": true,
+    "logs_loaded": true
+  }
+}
