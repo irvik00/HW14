@@ -110,6 +110,8 @@ threat-analyzer/
 ├── reporter.py
 ├── responder.py
 ├── visualizer.py
+├── email_sender.py
+│
 ├── threat_analyzer.log           # Лог файл (создаётся при запуске)
 ├── blocked_ips.log               # Лог заблокированных IP (создаётся при запуске)
 │
@@ -412,6 +414,60 @@ CVE-2026-3826 | CVSS: 9.8 | IFTOP developed by WellChoose has a Local File Inclu
 ✅ Анализ успешно завершён!
 ============================================================
 ```
+
+## Email-уведомления (опционально)
+
+Проект поддерживает отправку **email-уведомлений при обнаружении угроз**.
+
+Если обнаружены:
+
+* критические CVE
+* подозрительные IP
+
+скрипт может отправить уведомление на указанный email.
+
+Для этого используется модуль:
+
+```
+email_sender.py
+```
+
+### Настройка
+
+Добавьте в файл `.env`:
+
+```env
+EMAIL_ENABLED=true
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SENDER_EMAIL=your_email@gmail.com
+SENDER_PASSWORD=your_app_password
+RECIPIENT_EMAIL=recipient@gmail.com
+```
+
+### Важно
+
+Для Gmail необходимо использовать **пароль приложения**, а не обычный пароль.
+
+Инструкция:
+https://support.google.com/accounts/answer/185833
+
+### Пример уведомления
+
+```
+КРИТИЧЕСКИЕ УГРОЗЫ ОБНАРУЖЕНЫ!
+
+📊 Статистика:
+- Критических CVE: 8
+- Подозрительных IP: 1
+
+🕐 Время: 2026-03-11 14:08:03
+
+📁 Отчёты сохранены в папке reports/
+```
+
+Если email-уведомления отключены (`EMAIL_ENABLED=false`), скрипт продолжит работу без отправки сообщений.
+
 
 ---
 
