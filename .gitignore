@@ -1,0 +1,8 @@
+venv/
+.env
+__pycache__/
+*.pyc
+reports/
+logs/suricata_sample.json   # если не хотите хранить пример в репозитории
+threat_analyzer.log
+blocked_ips.log

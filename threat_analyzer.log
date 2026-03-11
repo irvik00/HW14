@@ -1,0 +1,159 @@
+2026-03-11 17:08:04,568 - __main__ - INFO - Запуск анализатора угроз
+2026-03-11 17:08:04,569 - __main__ - INFO - Получение данных из API Vulners...
+2026-03-11 17:08:04,807 - api_client - INFO - Получено 29 уязвимостей, пропущено 1
+2026-03-11 17:08:04,807 - __main__ - INFO - Получено 29 уязвимостей
+2026-03-11 17:08:04,808 - __main__ - INFO - Чтение логов Suricata из logs/suricata_sample.json...
+2026-03-11 17:08:04,809 - log_parser - INFO - Обработано строк: 9, ошибок JSON: 0
+2026-03-11 17:08:04,809 - log_parser - INFO - Загружено 9 alert-событий из файла logs/suricata_sample.json
+2026-03-11 17:08:04,809 - __main__ - INFO - Загружено 9 alert-событий
+2026-03-11 17:08:04,810 - __main__ - INFO - Анализ данных...
+2026-03-11 17:08:04,810 - __main__ - INFO - Анализ данных
+2026-03-11 17:08:04,827 - analyzer - INFO - Всего уязвимостей с CVSS: 29
+2026-03-11 17:08:04,827 - analyzer - INFO - Найдено 10 критических (CVSS >= 7.0)
+2026-03-11 17:08:04,829 - analyzer - INFO - Максимальный CVSS: 9.8, средний CVSS: 8.05
+2026-03-11 17:08:04,841 - analyzer - INFO - Всего уникальных IP: 5
+2026-03-11 17:08:04,841 - analyzer - INFO - Топ-5 IP-адресов: ['192.168.1.10', '192.168.1.20', '192.168.1.30', '192.168.1.40', '192.168.1.50']
+2026-03-11 17:08:04,842 - analyzer - INFO - CVSS статистика: всего=29, среднее=4.60, медиана=6.10, мин=0.0, макс=9.8
+2026-03-11 17:08:04,842 - __main__ - INFO - Найдено 10 критических уязвимостей
+2026-03-11 17:08:04,843 - analyzer - INFO - CVSS статистика: всего=29, среднее=4.60, медиана=6.10, мин=0.0, макс=9.8
+2026-03-11 17:08:04,844 - __main__ - INFO - Топ-5 IP: ['192.168.1.10', '192.168.1.20', '192.168.1.30', '192.168.1.40', '192.168.1.50']
+2026-03-11 17:08:04,846 - responder - INFO - Выведено 10 критических уязвимостей (CVSS >= 7.0)
+2026-03-11 17:08:04,846 - __main__ - INFO - Реагирование на угрозы (блокировка IP)
+2026-03-11 17:08:04,846 - responder - INFO - Записано 1 записей о блокировке в blocked_ips.log
+2026-03-11 17:08:04,847 - __main__ - INFO - Отправка email-уведомления...
+2026-03-11 17:08:04,847 - email_sender - INFO - Подключение к SMTP серверу smtp.gmail.com:587
+2026-03-11 17:08:05,443 - email_sender - ERROR - Ошибка отправки email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-48541b6f708sm221652865e9.11 - gsmtp')
+2026-03-11 17:08:05,444 - __main__ - INFO - Сохранение отчётов...
+2026-03-11 17:08:05,445 - __main__ - INFO - Сохранение отчётов
+2026-03-11 17:08:05,447 - reporter - INFO - Директория reports готова
+2026-03-11 17:08:05,458 - reporter - INFO - Сохранён отчёт с CVE: reports\critical_cves.csv (размер: 2408 байт, записей: 10)
+2026-03-11 17:08:05,459 - reporter - INFO - Директория reports готова
+2026-03-11 17:08:05,461 - reporter - INFO - Сохранён отчёт с топ IP: reports\top_ips.csv (размер: 189 байт, записей: 5)
+2026-03-11 17:08:05,463 - reporter - INFO - Директория reports готова
+2026-03-11 17:08:05,464 - reporter - INFO - Сохранён JSON-отчёт: reports\summary.json (размер: 1057 байт)
+2026-03-11 17:08:05,464 - __main__ - INFO - Построение графиков...
+2026-03-11 17:08:05,464 - __main__ - INFO - Построение графиков
+2026-03-11 17:08:05,635 - visualizer - INFO - Сохранён график топ IP: reports\threat_analysis.png
+2026-03-11 17:08:05,836 - visualizer - INFO - Сохранён график распределения CVSS: reports\cvss_distribution.png
+2026-03-11 17:08:05,837 - __main__ - INFO - Анализ завершён успешно
+2026-03-11 17:08:50,950 - email_sender - ERROR - Ошибка отправки email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-439f8224420sm7147807f8f.39 - gsmtp')
+2026-03-11 17:11:18,017 - email_sender - ERROR - Ошибка отправки email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-439f81a0239sm7256407f8f.10 - gsmtp')
+2026-03-11 17:12:14,555 - email_sender - ERROR - Ошибка отправки email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-48541b7f406sm149735195e9.13 - gsmtp')
+2026-03-11 17:13:40,567 - email_sender - ERROR - Ошибка отправки email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-439f818ff0fsm7533180f8f.4 - gsmtp')
+2026-03-11 17:17:52,452 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:17:52,481 - main - WARNING - Продолжаем работу без данных об уязвимостях
+2026-03-11 17:17:52,483 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:17:52,499 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+2026-03-11 17:17:52,569 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+2026-03-11 17:18:39,789 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:18:39,792 - main - WARNING - Продолжаем работу без данных об уязвимостях
+2026-03-11 17:18:39,794 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:18:39,809 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+2026-03-11 17:18:39,868 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+2026-03-11 17:19:38,948 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:19:38,951 - main - WARNING - Продолжаем работу без данных об уязвимостях
+2026-03-11 17:19:38,953 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:19:38,969 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+2026-03-11 17:19:39,027 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+2026-03-11 17:20:16,037 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:20:16,040 - main - WARNING - Продолжаем работу без данных об уязвимостях
+2026-03-11 17:20:16,042 - main - ERROR - Ошибка API Vulners: API Error
+2026-03-11 17:20:16,138 - main - ERROR - Непредвиденная ошибка: pytest: reading from stdin while output is captured!  Consider using `-s`.
+Traceback (most recent call last):
+  File "d:\Study\Python\Final\main.py", line 442, in main
+    config = get_user_config()
+  File "d:\Study\Python\Final\config.py", line 138, in get_user_config
+    if not ask_yes_no("\nХотите изменить настройки?", default=False):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Study\Python\Final\config.py", line 78, in ask_yes_no
+    answer = input(f"{question} ({default_str}): ").strip().lower()
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\VS_Code\anaconda\Lib\site-packages\_pytest\capture.py", line 209, in read
+    raise OSError(
+        "pytest: reading from stdin while output is captured!  Consider using `-s`."
+    )
+OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
