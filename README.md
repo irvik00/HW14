@@ -229,8 +229,8 @@ threat-analyzer/
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/username/threat-analyzer.git
-cd threat-analyzer
+git clone https://github.com/irvik00/HW14.git
+cd HW14
 ```
 
 ---
@@ -300,7 +300,30 @@ python main.py
 
 Запуск с параметрами
 ```bash
-python main.py --log-file logs/custom.json --vuln-limit 50 --threshold 8.0
+usage: main.py [-h] [--log-file LOG_FILE] [--vuln-limit VULN_LIMIT] [--threshold THRESHOLD] [--block-threshold BLOCK_THRESHOLD] [--top-n TOP_N] [--no-block] [--skip-vulns] [--skip-logs] [--test-mode] [--verbose]
+
+Автоматизированный мониторинг и реагирование на угрозы
+
+options:
+  -h, --help            show this help message and exit
+  --log-file LOG_FILE   Путь к файлу логов Suricata
+  --vuln-limit VULN_LIMIT
+                        Количество уязвимостей для загрузки
+  --threshold THRESHOLD
+                        Порог CVSS для критичности
+  --block-threshold BLOCK_THRESHOLD
+                        Порог событий для блокировки IP
+  --top-n TOP_N         Количество IP в топе
+  --no-block            Отключить имитацию блокировки IP
+  --skip-vulns          Пропустить загрузку уязвимостей (только логи)
+  --skip-logs           Пропустить загрузку логов (только уязвимости)
+  --test-mode           Тестовый режим (использует тестовые данные)
+  --verbose, -v         Подробный вывод (уровень DEBUG)
+
+Примеры использования:
+  python main.py --log-file logs/eve.json --vuln-limit 50
+  python main.py --no-block --threshold 8.0
+  python main.py --skip-vulns --skip-logs --test-mode
 ```
 
 
