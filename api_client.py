@@ -7,7 +7,7 @@ from typing import List, Dict, Optional, Union
 
 logger = logging.getLogger(__name__)
 
-# Свои исключения, чтобы было понятно, что пошло не так
+
 class VulnersAPIError(Exception):
     """Базовое исключение для ошибок Vulners API"""
     pass
@@ -48,7 +48,6 @@ def get_vulnerabilities(limit: int = 50, min_cvss: Optional[float] = None) -> Li
     api_key = os.getenv('VULNERS_API_KEY')
     if not api_key:
         logger.error("VULNERS_API_KEY не найден в переменных окружения. Проверьте .env файл")
-        # Тут не бросаем исключение, потому что это частая ситуация при первом запуске
         return []
 
     url = "https://vulners.com/api/v3/search/lucene/"
@@ -100,7 +99,6 @@ def get_vulnerabilities(limit: int = 50, min_cvss: Optional[float] = None) -> Li
         return []
     except VulnersAuthError as e:
         logger.error(f"Ошибка аутентификации: {e}")
-        # Возвращаем пустой список, но проблема серьёзная - пользователь должен проверить ключ
         return []
     except VulnersRateLimitError as e:
         logger.error(f"Лимит запросов: {e}. Попробуйте позже или уменьшите limit")
@@ -153,7 +151,7 @@ def get_vulnerabilities(limit: int = 50, min_cvss: Optional[float] = None) -> Li
             
             vulnerabilities.append({
                 'cve_id': cve_id,
-                'cvss': float(cvss),  # на всякий случай приводим к float
+                'cvss': float(cvss),
                 'description': short_desc
             })
             
@@ -194,4 +192,5 @@ if __name__ == "__main__":
         print("\nУязвимости не найдены или произошла ошибка. Проверьте:")
         print("  - Файл .env с ключом API")
         print("  - Интернет-соединение")
+
         print("  - Логи выше для деталей")
