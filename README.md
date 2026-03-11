@@ -337,6 +337,10 @@ python visualizer.py
 
 Это создаст **дополнительные тестовые графики PNG**.
 
+## Пример визуализации
+
+![Threat Analysis](reports/cvss_distribution.png)
+
 ---
 
 # Запуск тестов
