@@ -320,7 +320,7 @@ reports/
 | top_ips.csv           | топ IP по количеству событий   |
 | summary.json          | краткая статистика             |
 | cvss_distribution.png | распределение CVSS             |
-| threat_analysis.png   | общий график анализа           |
+| threat_analysis.png   | топ IP в виде графика          |
 
 ---
 
