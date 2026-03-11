@@ -119,8 +119,6 @@ threat-analyzer/
 ├── .gitignore
 ├── .env                          # Файл с переменными окружения (API ключ)
 │
-├── venv/
-│
 ├── logs/                        # Папка для логов Suricata
 │   ├── alerts-only.json
 │   └── suricata_sample.json
