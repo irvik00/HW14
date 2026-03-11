@@ -1,0 +1,9 @@
+{"timestamp":"2023-10-01T10:00:01.123456+0300","event_type":"alert","src_ip":"192.168.1.10","dest_ip":"8.8.8.8","alert":{"severity":1,"signature":"ET MALWARE Suspicious DNS Query"}}
+{"timestamp":"2023-10-01T10:00:02.234567+0300","event_type":"alert","src_ip":"192.168.1.20","dest_ip":"1.1.1.1","alert":{"severity":2,"signature":"ET POLICY Outgoing HTTP"}}
+{"timestamp":"2023-10-01T10:00:03.345678+0300","event_type":"alert","src_ip":"192.168.1.10","dest_ip":"8.8.4.4","alert":{"severity":1,"signature":"ET TROJAN Possible C2 Traffic"}}
+{"timestamp":"2023-10-01T10:00:04.456789+0300","event_type":"alert","src_ip":"192.168.1.30","dest_ip":"208.67.222.222","alert":{"severity":3,"signature":"ET SCAN Suspicious Port Scan"}}
+{"timestamp":"2023-10-01T10:00:05.567890+0300","event_type":"alert","src_ip":"192.168.1.10","dest_ip":"8.8.8.8","alert":{"severity":1,"signature":"ET MALWARE Known Malicious IP"}}
+{"timestamp":"2023-10-01T10:00:06.678901+0300","event_type":"alert","src_ip":"192.168.1.20","dest_ip":"1.0.0.1","alert":{"severity":2,"signature":"ET POLICY HTTP Request to External Host"}}
+{"timestamp":"2023-10-01T10:00:07.789012+0300","event_type":"alert","src_ip":"192.168.1.40","dest_ip":"192.168.1.1","alert":{"severity":3,"signature":"ET POLICY Internal Scan"}}
+{"timestamp":"2023-10-01T10:00:08.890123+0300","event_type":"alert","src_ip":"192.168.1.10","dest_ip":"8.8.8.8","alert":{"severity":1,"signature":"ET MALWARE DNS Query for Malicious Domain"}}
+{"timestamp":"2023-10-01T10:00:09.901234+0300","event_type":"alert","src_ip":"192.168.1.50","dest_ip":"10.0.0.1","alert":{"severity":2,"signature":"ET POLICY Suspicious User-Agent"}}
