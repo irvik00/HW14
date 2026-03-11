@@ -261,17 +261,23 @@ pip install -r requirements.txt
 
 ---
 
-# Настройка API
+# Настройка
 
 Получите API ключ Vulners:
 
 https://vulners.com
 
-Добавьте ключ в файл `.env` в корне проекта:
+Скопируйте файл `.env.example` в `.env` в корень проекта:
 
+```bash
+cp .env.example .env
 ```
-VULNERS_API_KEY=ваш_api_ключ
-```
+
+Отредактируйте `.env`, подставив свои реальные данные:
+
+* `VULNERS_API_KEY` - ваш ключ от Vulners
+
+* `SENDER_EMAIL` и `SENDER_PASSWORD` - данные для email (для Gmail нужен пароль приложения)
 
 ---
 
@@ -504,12 +510,3 @@ https://support.google.com/accounts/answer/185833
 * реагирование
 * отчётность
 * визуализация
-
----
-
-# Лицензия
-
-Учебный проект.
-
-
-
